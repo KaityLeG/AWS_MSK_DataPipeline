@@ -1,8 +1,47 @@
 # AWS_MSK_DataPipeline
 
 <p align="center">
+This project aims to build a simple end to end Kafka data streaming pipline. 
+</p>
+
+***
+
+**EXAMPLE:**
+<p>
+Say your boss at your company is looking for some questions. They need someone to quickly answer a singular question. "How much did we spend between ads on this website and that website?" "What caused leads to spike this week?". Of course, you can visualize these questions with a dashboard and look at overtime results, but for this particular scenario, an immediate and specific answer is needed.
+  </p>
+
+**SOLUTION:**
+<p>
+Build a serverless, end to end data streaming pipeline that will ingest data for many purposes including ad-hoc analytics. This pipeline will make it very efficient to migrate, build, and run real-time data streaming applications on Apache Kafka. Through serverless and managed services on AWS, data sourcing, exploring, and visualizing such data will help businesses with real-time needs with little interference as possible. Allowing you to use the pipeline for multiple solutions.
+ </p>
+
+
+ **OBJECTIVE:**
+
+* FLEXIBLE INFRASTRUCTURE
+* NO UPFRONT COST
+* SERVERLESS
+* FAAS
+* PAAS
+</p>
+
+**AWS Cloud services used:**
+* EC2
+* API GATEWAY
+* SQS
+* LAMBDA
+* MSK (MANAGED STREAMING FOR APACHE KAFKA)
+* KINESIS FIREHOUSE
+* S3
+* GLUE
+* ATHENA
+</p>
+
+<p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDataPipeline.png"  title="hover text">
   </p>
+
 ***
 
 <p align="center">
