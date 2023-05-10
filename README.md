@@ -464,17 +464,18 @@ Build a serverless, end to end data streaming pipeline that will ingest data for
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP73.png" width="700"  title="hover text">
  </p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP74.png" width="700"  title="hover text">
+ </p>
+  <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP75.png" width="700"  title="hover text">
+ </p>
  <p align="center">
   Allow Athena to query or peeform any task you would like. here is just a quick example of the from of events that you can add in your pipeline.
   </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP74.png" width="700"  title="hover text">
- </p>
-<p align="center">
-  This is the end of this pipeline. It is editable and of course there are many ways to go about this
-  <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP75.png" width="700"  title="hover text">
- </p>
-<p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP76.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  This is the end of this pipeline. It is editable and of course there are many ways to go about this
+  </p>
 
