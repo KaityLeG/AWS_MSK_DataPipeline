@@ -423,29 +423,26 @@ Build a serverless, end to end data streaming pipeline that will ingest data for
   I went to postman, Created a POST with the API Gateway. You can see the messages being pubslihed to the SQS queue.
   </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP66.png" width="700"  title="hover text">
- </p>
-<p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP67.png" width="700"  title="hover text">
  </p>
- <p align="center">
-  The CloudWatch logs you can see the lambda producer requests
-  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP68.png" width="700"  title="hover text">
  </p>
- <p align="center">
-  Here you can see the Consumer lambda logs
+  <p align="center">
+  The CloudWatch logs you can see the lambda producer requests
   </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP69.png" width="700"  title="hover text">
  </p>
  <p align="center">
-  You can see the S3 bucket storing the PUTS of the Kinesis Firehose streams.
+  Here you can see the Consumer lambda logs
   </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP70.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  You can see the S3 bucket storing the PUTS of the Kinesis Firehose streams.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP71.png" width="700"  title="hover text">
  </p>
