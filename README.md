@@ -458,15 +458,15 @@ Build a serverless, end to end data streaming pipeline that will ingest data for
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP72.png" width="700"  title="hover text">
  </p>
- <p align="center">
-  Run the crawler and create a table
-  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP73.png" width="700"  title="hover text">
  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP74.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  Run the crawler and create a table
+  </p>
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP75.png" width="700"  title="hover text">
  </p>
  <p align="center">
