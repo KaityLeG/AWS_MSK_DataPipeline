@@ -309,66 +309,112 @@ Build a serverless, end to end data streaming pipeline that will ingest data for
  </p>
  <p align="center">
   Choose the S3 bucket that was created.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP45.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  Choose the buffer parameters 
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP46.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  Go to Lambda and create another one, this time for the Kafka Consumer.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP47.png" width="700"  title="hover text">
  </p>
-<p align="center">
+ <p align="center">
+  Input the code and click Deploy.
+   This code is designed to process events from the Consumer function into Kinesis Firehouse, then it will stream data into S3 bucket to      store. </p>
+  <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP48.png" width="700"  title="hover text">
  </p>
+  <p align="center">
+  I chose 4 min for timeout. Here select an IAM role that will allow access. Open new tab and add policies to the existing role. Do that in the follow images.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP49.png" width="700"  title="hover text">
  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP50.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  Now we are going to create one public and one private ec2 to use to ping private MSK cluster to public subnet using its NAT Gateway. Here is the public one. Choose public subnet and make sure to choose the VPC that was created earlier. 
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP51.png" width="700"  title="hover text">
  </p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP52.png" width="700"  title="hover text">
- </p>
+ <p align="center">
+  This is the private EC2 instance. Make sure the subnet choosen is the private one.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP53.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  Choose security group of private EC2. Allow All Traffic from MSK cluster to EC2 in private subnet. Allow SSH also. Add security group of MSK cluster here.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP54.png" width="700"  title="hover text">
+ </p>
+ Go to security group of MSK cluster and allow traffic from private ec2 instance and itself. Make sure it says All. on both port ranges. ignore the 0 in the picture.
  </p>
  <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP55.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  SSH into public ec2 instance.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP56.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  Go to the MSK cluster to the bootstrap servers that will establish a connection. 
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP57.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  Go to the KafkaProducer lambda and insert it into the code. Click Deploy.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP58.png" width="700"  title="hover text">
  </p>
-<p align="center">
+ <p align="center">
+  Move the pem key of the private ec2 into the public ec2. This is how I did it using FileZilla.
+  </p>
+ <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP59.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  Here you can see the public ec2 that we connect to has the pem file of the private ec2, SSH into the priavte ec2 by way of the public ec2.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP60.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  ping to see if the conenction is working. Install java and Kafka after this.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP61.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  After installing java and kafka onto this private ec2 instance use this sh command to create a kafka topic. Insert your MSK bootstrap servers that you copied earlier after the bootstrap flag.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP62.png" width="700"  title="hover text">
  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP63.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  Put the sh command to add the kafka consumer.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP64.png" width="700"  title="hover text">
  </p>
+ Go to kafka producer lambda
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP65.png" width="700"  title="hover text">
  </p>
