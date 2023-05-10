@@ -414,38 +414,64 @@ Build a serverless, end to end data streaming pipeline that will ingest data for
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP64.png" width="700"  title="hover text">
  </p>
- Go to kafka producer lambda
+ Go to kafka consumer lambda and add MSK as a trigger. Insert the topic name of the kafka consumer.
+ </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP65.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  I went to postman, Created a POST with the API Gateway. You can see the messages being pubslihed to the SQS queue.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP66.png" width="700"  title="hover text">
  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP67.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  The CloudWatch logs you can see the lambda producer requests
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP68.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  Here you can see the Consumer lambda logs
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP69.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  You can see the S3 bucket storing the PUTS of the Kinesis Firehose streams.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP70.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  Here, its not required but Go to Glue and create a crawler.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP71.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  Create a table and a database.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP72.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  Run the crawler and create a table
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP73.png" width="700"  title="hover text">
  </p>
+ <p align="center">
+  Allow Athena to query or peeform any task you would like. here is just a quick example of the from of events that you can add in your pipeline.
+  </p>
 <p align="center">
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP74.png" width="700"  title="hover text">
  </p>
 <p align="center">
+  This is the end of this pipeline. It is editable and of course there are many ways to go about this
   <img src="https://raw.githubusercontent.com/KaityLeG/AWS_MSK_DataPipeline/main/images/MSKDP75.png" width="700"  title="hover text">
  </p>
 <p align="center">
