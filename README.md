@@ -1,7 +1,7 @@
 # AWS_MSK_DataPipeline
 
 <p align="center">
-This project aims to build a simple end to end Kafka data streaming pipline. 
+This one project aims to build a simple end to end Kafka data streaming pipline. 
 </p>
 
 ***
