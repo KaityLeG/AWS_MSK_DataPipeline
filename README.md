@@ -8,7 +8,7 @@ This one project aims to build a simple end to end Kafka data streaming pipline.
 
 **EXAMPLE:**
 <p>
-Say your boss at your company is looking for some questions. They need someone to quickly answer a singular question. "How much did we spend between ads on this website and that website?" "What caused leads to spike this week?". Of course, you can visualize these questions with a dashboard and look at overtime results, but for this particular scenario, an immediate and specific answer is needed.
+Say your boss at the company is looking for some questions. They need someone to quickly answer a singular question. "How much did we spend between ads on this website and that website?" "What caused leads to spike this week?". Of course, you can visualize these questions with a dashboard and look at overtime results, but for this particular scenario, an immediate and specific answer is needed.
   </p>
 
 **SOLUTION:**
